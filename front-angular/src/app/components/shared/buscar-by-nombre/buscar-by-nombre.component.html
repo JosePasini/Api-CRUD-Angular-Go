@@ -1,0 +1,22 @@
+<p>buscar-by-nombre works!</p>
+<div *ngIf="dataArrAux.length < 1">
+    <h2>No se encontraron coincidencias.</h2>
+</div>
+
+<div class="row row-cols-3 row-cols-md-4 g-4">
+    <div class="col" *ngFor="let data of dataArrAux; let i = index">
+        <div class="card h-100">
+            <img src="assets/img/{{data.imagen}}" class="card-img-top" alt="{{data.imagen}}">
+            <div class="card-body">
+                <h5 class="card-title">{{ data.marca }}</h5>
+                <p class="card-text">${{ data.marca }}</p>
+                <p class="card-text">{{ data.marca }}</p>
+            </div>
+            <div class="card-footer">
+                <small class="text-muted">Last updated 3 mins ago</small>
+                <hr>
+                <a href="detalleByIDCard/{{data.id}}" class="btn btn-primary" style="width: 40%;"> detalles </a>
+            </div>
+        </div>
+    </div>
+</div>

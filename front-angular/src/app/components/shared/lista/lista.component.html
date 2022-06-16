@@ -1,0 +1,43 @@
+<h1>Nuestros Instrumentos - Lista</h1>
+
+<button href="/formulario" class="btn btn-primary">Crear Provincia</button>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Instrumento</th>
+            <th scope="col">Marca</th>
+            <th scope="col">precio</th>
+            <th scope="col">imagen</th>
+            <th scope="col">Modificar</th>
+            <th scope="col">Eliminar</th>
+            <th scope="col">Ver Detalles</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of dataArr; let i = index">
+            <th scope="row">{{data.id}}</th>
+            <td>{{data.instrumento}}</td>
+            <td>{{data.marca}}</td>
+            <td>${{data.precio}}</td>
+            <td>
+                <img src="assets/img/{{data.imagen}}" alt="{{data.imagen}}">
+            </td>
+            <td routerLinkActive="active">
+                <a href='/formulario/{{data.id}}'>
+                    <button class="btn btn-primary">modificar</button>
+                </a>
+            </td>
+            <td>
+                <button (click)="deleteData(data.id)" class="btn btn-danger">eliminar</button>
+            </td>
+            <td>
+                <button (click)="getDataByID(data.id)" class="btn btn-primary">ver detalles</button>
+            </td>
+        </tr>
+    </tbody>
+
+</table>
+
+
+[routerLink]="['lista']"

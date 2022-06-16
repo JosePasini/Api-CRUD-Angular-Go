@@ -1,0 +1,27 @@
+<p>detalle-data works!</p>
+<button href="/formulario" class="btn btn-primary">Crear Provincia</button>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Instrumento</th>
+            <th scope="col">Marca</th>
+            <th scope="col">Precop</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngIf="data">
+            <th scope="row">{{data.id}}</th>
+            <td>{{data.instrumento}}</td>
+            <td>{{data.precio}}</td>
+            <td>
+                <img src="assets/img/{{data.imagen}}" alt="{{data.imagen}}">
+            </td>
+        </tr>
+    </tbody>
+    <div>
+        
+        <button (click)="lista()" class="btn btn-primary">volver</button>
+    </div>
+
+</table>

@@ -1,0 +1,17 @@
+<p>detalle-by-id-card works!</p>
+<div class="row">
+    <div class="col-md-4" style="text-align: center;">
+        <img src="assets/img/{{data.imagen}}" alt="" style="max-width: 300px;" class="img-fluid">
+        <br><br>
+        <a href="/listaCard" class="btn btn-outline-danger btn-block">Regresar</a>
+    </div>
+    <div class="col-md-8">
+        <h3 style="color: crimson">{{data.instrumento}}</h3>
+        <hr>
+        <p>{{data.marca}}</p>
+        <p> <b>Precio:</b> ${{data.marca}}</p>
+        <span *ngIf="data.precio == 0" style="color:red;">
+            <p> <b>Precio:</b> ${{data.precio}}</p>
+        </span>
+    </div>
+</div>

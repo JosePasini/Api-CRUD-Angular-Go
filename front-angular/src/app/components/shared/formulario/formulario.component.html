@@ -1,0 +1,57 @@
+<div class="container">
+    <h1>Formulario</h1>
+    <div>
+        <h3>Ingrese datos</h3>
+    </div>
+    <form [formGroup]="dataForm" (ngSubmit)="onForm(dataForm.value)">
+        <div class="form-group">
+            <div class="form-group">
+                <label for="instrumento">Ingrese instrumento</label>
+                <input type="text" class="form-control" id="instrumento" placeholder="instrumento"
+                    formControlName="instrumento">
+            </div>
+
+            <div class="form-group">
+                <label for="marca">Ingrese marca</label>
+                <input type="text" class="form-control" id="marca" placeholder="marca"
+                    formControlName="marca">
+            </div>
+
+            <div class="form-group">
+                <label for="modelo">Ingrese modelo</label>
+                <input type="number" class="form-control" id="modelo" placeholder="modelo"
+                    formControlName="modelo">
+            </div>
+
+            <div class="form-group">
+                <label for="imagen">Ingrese imagen</label>
+                <input type="number" class="form-control" id="imagen" placeholder="imagen"
+                    formControlName="imagen">
+            </div>
+
+            <div class="form-group">
+                <label for="precio">Ingrese precio</label>
+                <input type="number" class="form-control" id="precio" placeholder="precio"
+                    formControlName="precio">
+            </div>
+
+            <div class="form-group">
+                <label for="costo_envio">Ingrese costo_envio</label>
+
+                <input type="text" class="form-control" id="costo_envio" placeholder="costo_envio"
+                    formControlName="costo_envio">
+            </div>
+
+            <div class="form-group">
+                <label for="descripcion">Ingrese descripcion</label>
+
+                <input type="text" class="form-control" id="descripcion" placeholder="descripcion"
+                    formControlName="descripcion">
+            </div>
+
+            <div class="form-group">
+                <input type="submit" class="btn btn-primary" value="Submit">
+            </div>
+        </div>
+    </form>
+</div>
